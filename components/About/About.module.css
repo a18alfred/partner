@@ -1,0 +1,119 @@
+.aboutContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 0 2rem;
+}
+
+.aboutWrapper {
+    display: flex;
+    width: 100%;
+    max-width: var(--contnent-width);
+    padding: 11% 0;
+}
+
+.aboutInfoWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-width: 54%;
+    max-width: 54%;
+}
+
+.aboutButtonWrapper {
+    font-size: clamp(1.875rem, 1.6786rem + 0.3571vw, 2rem);
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.aboutButton {
+    background: transparent;
+    color: var(--secondary-text-color);
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.aboutButtonActive {
+    color: var(--text-color);
+    cursor: default;
+}
+
+.aboutSeparator {
+    margin: 0 1em;
+    color: var(--secondary-text-color);
+}
+
+.aboutText {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 180%;
+}
+
+.aboutImageWrapper {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding-left: 110px;
+}
+
+.aboutImage {
+    width: 100%;
+    height: auto;
+}
+
+.aboutExtraMarginBottom {
+    margin-bottom: 11%;
+}
+
+.aboutSvgLeft {
+    position: absolute;
+    bottom: 0;
+    left: 4%;
+    z-index: -1;
+    width: 15vw;
+    max-width: 235px;
+    height: auto;
+}
+
+.aboutSvgRight {
+    position: absolute;
+    top: 0;
+    right: 4%;
+    z-index: -1;
+    width: 20vw;
+    max-width: 314px;
+    height: auto;
+}
+
+@media screen and (max-width: 880px) {
+    .aboutInfoWrapper {
+        max-width: 100%;
+    }
+
+    .aboutImageWrapper {
+        display: none;
+    }
+
+    .aboutCallButton {
+        font-size: clamp(1rem, 0.8144rem + 0.7921vw, 1.25rem);
+        padding: 4% 7%;
+    }
+
+    .aboutButtonWrapper {
+        /*18 30*/
+        font-size: clamp(1.125rem, 0.5681rem + 2.3762vw, 1.875rem);
+    }
+
+    .aboutSvgLeft {
+        display: none;
+    }
+
+    .aboutSvgRight {
+        display: none;
+    }
+}

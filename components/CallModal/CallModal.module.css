@@ -1,0 +1,238 @@
+.callModalContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 99;
+
+    animation-duration: 0.2s;
+    animation-name: fadeInOver;
+}
+
+@keyframes fadeInOver {
+    from {
+        background: rgba(0, 0, 0, 0);
+    }
+
+    to {
+        background: rgba(0, 0, 0, 0.75);
+    }
+}
+
+.callModalWrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 100vw;
+    max-height: 100vh;
+    max-width: 880px;
+    color: var(--text-color);
+    z-index: 100;
+    opacity: 1;
+
+
+    animation-duration: 0.2s;
+    animation-name: fadeInModal;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    overflow-y: auto;
+}
+
+@keyframes fadeInModal {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.callModalCross {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+    z-index: 101;
+}
+
+.callModalImageWrapper {
+    max-height: 66vw;
+    background-position: center;
+    background-image: url('/assets/images/contacts_img.webp');
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: -1;
+}
+
+.callModalForm {
+    max-height: 66vw;
+    background: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 3rem;
+}
+
+.callModalForm h4 {
+    width: 100%;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+.callModalText {
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+}
+
+.callModalForm p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 133%;
+}
+
+.callModalForm input {
+    width: 100% !important;
+    height: 24px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #808080;
+    margin-bottom: 2.5rem;
+    font-family: inherit;
+    font-size: 16px;
+    border-radius: 0;
+}
+
+.callModalInputValid input {
+    border-bottom: 1px solid #808080;
+}
+
+.callModalInputError input {
+    border-bottom: 2px solid red;
+}
+
+.callModalForm input::placeholder {
+    color: #808080;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.callModalSentText {
+    width: 100%;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.callModalButton {
+    background: var(--nav-text-active);
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    width: 100%;
+    padding: 6.5% 13.5%;
+    cursor: pointer;
+    outline: inherit;
+    font-family: inherit;
+    margin-top: 4rem;
+    z-index: 1;
+}
+
+.callModalSmallText {
+    font-size: 9px !important;
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 600 !important;
+    line-height: 24px;
+}
+
+@media screen and (max-width: 880px) {
+    .callModalButton {
+        font-size: clamp(1rem, 0.8144rem + 0.7921vw, 1.25rem);
+        padding: 4% 8%;
+        border-radius: clamp(0.125rem, -0.0606rem + 0.7921vw, 0.375rem);
+    }
+
+    .callModalSmallText {
+        display: none;
+    }
+
+    .callModalWrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .callModalForm {
+        height: min-content;
+        max-height: 104vw;
+    }
+
+    .callModalImageWrapper {
+        display: none;
+    }
+
+    .callModalForm {
+        padding: 2rem;
+    }
+
+    .callModalForm h4 {
+        font-size: clamp(1.25rem, 0.6931rem + 2.3762vw, 2rem);
+    }
+
+    .callModalForm p {
+        font-size: clamp(0.875rem, 0.6894rem + 0.7921vw, 1.125rem);
+    }
+
+    .callModalForm input::placeholder {
+        font-size: clamp(0.875rem, 0.7822rem + 0.396vw, 1rem);
+    }
+
+    .callModalForm input {
+        margin-bottom: 8vw;
+    }
+
+    .callModalText {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 2vw;
+        margin-bottom: 8vw;
+        gap: 0.5em;
+    }
+
+    .callModalButton {
+        margin-top: 4vw;
+        margin-bottom: 4vw;
+        width: 60%;
+        max-width: 400px;
+        padding: 4% 0;
+        font-size: clamp(0.875rem, 0.5965rem + 1.1881vw, 1.25rem);
+    }
+
+    .callModalSentText {
+        margin-top: 4vw;
+        margin-bottom: 4vw;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .callModalText {
+        display: block;
+    }
+}
+
+.callModalWrapper::-webkit-scrollbar {
+    width: 7px;
+}

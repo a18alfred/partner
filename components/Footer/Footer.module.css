@@ -1,0 +1,23 @@
+.FooterContainer {
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+    padding: 24px 2rem;
+    font-weight: 400;
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    color: var(--secondary-text-color);
+}
+
+.FooterContainer p {
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 880px) {
+    .FooterContainer {
+        font-size: clamp(0.8125rem, 0.7661rem + 0.198vw, 0.875rem);
+    }
+}

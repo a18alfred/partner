@@ -1,0 +1,21 @@
+.heroButton {
+    background: var(--nav-text-active);
+    margin-top: 42px;
+    width: 21%;
+    color: var(--text-color);
+    font-size: clamp(1.125rem, 0.875rem + 0.4167vw, 1.25rem);
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    padding: 2.15%;
+    cursor: pointer;
+    outline: inherit;
+    font-family: inherit;
+    text-align: center;
+}
+
+@media screen and (max-width: 880px) {
+    .heroButton {
+        display: none;
+    }
+}

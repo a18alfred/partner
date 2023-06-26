@@ -1,0 +1,25 @@
+.navLinks {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 11;
+}
+
+.navLink {
+    font-size: clamp(1rem, 0.5769rem + 0.7692vw, 1.125rem);
+    font-weight: 600;
+    line-height: 14px;
+    letter-spacing: 0;
+    margin-left: 42px;
+    cursor: pointer;
+}
+
+.navLinkActive {
+    /*color: var(--nav-text-active);*/
+}
+
+@media screen and (max-width: 880px) {
+    .navLinks {
+        display: none;
+    }
+}

@@ -1,0 +1,137 @@
+.contactsContainer {
+    position: relative;
+    background: var(--nav-bg-color);
+    margin-bottom: 150px;
+}
+
+
+.contactsWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.contactsInfo {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contactsInfoWrapper {
+    width: 100%;
+    max-width: calc(var(--contnent-width) / 2 + 2rem);
+    color: var(--nav-text-color);
+    padding: 10% 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.contactsTextWrapper {
+    width: 100%;
+    color: var(--nav-text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    z-index: 5;
+}
+
+.contactsTitle {
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 1rem;
+}
+
+.contactsPhone {
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--nav-text-active);
+}
+
+.contactsAddress {
+    font-size: clamp(1rem, 0.6071rem + 0.7143vw, 1.25rem);
+    font-weight: 400;
+}
+
+.contactsAddress a {
+    color: var(--email-link);
+    text-decoration: underline;
+}
+
+.contactsExtraMarginBottom {
+    margin-bottom: 1rem;
+}
+
+
+.contactsMapWrapper {
+    background-position: center;
+    background-image: url('/assets/images/map.webp');
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: 1;
+}
+
+.contactsSvg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@media screen and (max-width: 880px) {
+    .contactsWrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .contactsTitle {
+        margin-bottom: 5.5%;
+        font-weight: 600;
+        font-size: clamp(1.125rem, 0.5681rem + 2.3762vw, 1.875rem);
+    }
+
+    .contactsInfo {
+        justify-content: center;
+    }
+
+    .contactsInfoWrapper {
+        width: 100%;
+        padding-top: 11%;
+        align-items: center;
+    }
+
+    .contactsTextWrapper {
+        width: 100%;
+        align-items: center;
+    }
+
+    .contactsAddress {
+        font-size: clamp(0.8125rem, 0.5236rem + 1.3208vw, 1.25rem);
+        text-align: center;
+    }
+
+    .contactsPhone {
+        margin-bottom: 5.5%;
+        font-size: clamp(1.25rem, 1.051rem + 0.8163vw, 1.5rem);
+    }
+
+    .contactsPhone {
+        margin-bottom: 1rem;
+    }
+
+    .contactsMapWrapper {
+        min-width: 100vw;
+        min-height: 60vw;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .contactsMapWrapper {
+        background-size: 125%;
+    }
+}

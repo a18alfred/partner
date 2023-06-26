@@ -1,0 +1,130 @@
+.servicesContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6% 2rem 11% 2rem;
+    background: var(--secondary-bg-color);
+    z-index: -1;
+}
+
+.servicesTitle {
+    font-size: clamp(1.875rem, 1.6786rem + 0.3571vw, 2rem);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 6%;
+}
+
+.servicesWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    max-width: var(--contnent-width);
+}
+
+.servicesService {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1em;
+}
+
+.servicesIconWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background: var(--nav-text-active);
+}
+
+.servicesIcon {
+    height: 64%;
+    width: auto;
+}
+
+.servicesServiceTitleWrapper {
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.servicesServiceTitle {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.servicesServiceDesc {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 180%;
+    text-align: center;
+}
+
+.servicesSvgLeft {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 34.3vw;
+    max-width: 570px;
+    height: auto;
+}
+
+.servicesSvgRight {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    width: 29.2vw;
+    max-width: 470px;
+    height: auto;
+}
+
+@media screen and (max-width: 1100px) {
+    .servicesWrapper {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .servicesContainer {
+        padding-top: 11%;
+    }
+
+    .servicesTitle {
+        margin-bottom: 11%;
+        font-size: clamp(1.125rem, 0.5681rem + 2.3762vw, 1.875rem);
+    }
+
+    .servicesSvgLeft {
+        width: 60vw;
+
+    }
+
+    .servicesSvgRight {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .servicesWrapper {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .servicesServiceTitle {
+        font-size: clamp(1.125rem, 1.0063rem + 0.5063vw, 1.25rem);
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .servicesServiceDesc {
+        font-size: 14px;
+    }
+}
